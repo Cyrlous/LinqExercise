@@ -33,8 +33,18 @@ namespace LinqExercise
             Console.WriteLine();
 
             //TODO: Order numbers in ascending order and print to the console
+            var ascendingNumbers = numbers.OrderBy(x => x).ToList();
+            Console.WriteLine("Numbers ordered by ascending:");
+            Console.WriteLine("--------------");
+            ascendingNumbers.ForEach(Console.WriteLine);
+            Console.WriteLine();
 
             //TODO: Order numbers in descending order and print to the console
+            var descendingNumbers = numbers.OrderByDescending(x => x).ToList();
+            Console.WriteLine("Numbers ordered by ascending:");
+            Console.WriteLine("--------------");
+            descendingNumbers.ForEach(Console.WriteLine);
+            Console.WriteLine();
 
             //TODO: Print to the console only the numbers greater than 6
 
