@@ -41,14 +41,27 @@ namespace LinqExercise
 
             //TODO: Order numbers in descending order and print to the console
             var descendingNumbers = numbers.OrderByDescending(x => x).ToList();
-            Console.WriteLine("Numbers ordered by ascending:");
+            Console.WriteLine("Numbers ordered by descending:");
             Console.WriteLine("--------------");
             descendingNumbers.ForEach(Console.WriteLine);
             Console.WriteLine();
 
             //TODO: Print to the console only the numbers greater than 6
+            var highNumbers = numbers.Where(x => x > 6).ToList();
+            Console.WriteLine("Numbers above 6:");
+            Console.WriteLine("--------------");
+            highNumbers.ForEach(Console.WriteLine);
+            Console.WriteLine();
 
             //TODO: Order numbers in any order (ascending or desc) but only print 4 of them **foreach loop only!**
+            var fourNumbers = numbers.OrderBy(x => x).Where(x => x < 4).ToList();
+            Console.WriteLine("Only print four numbers:");
+            Console.WriteLine("--------------");
+            foreach (var number in fourNumbers)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine();
 
             //TODO: Change the value at index 4 to your age, then print the numbers in descending order
 
