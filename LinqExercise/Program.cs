@@ -21,8 +21,16 @@ namespace LinqExercise
              */
 
             //TODO: Print the Sum of numbers
+            Console.WriteLine("Sum of Numbers:");
+            Console.WriteLine("--------------");
+            Console.WriteLine(numbers.Sum());
+            Console.WriteLine();
 
             //TODO: Print the Average of numbers
+            Console.WriteLine("Average of Numbers:");
+            Console.WriteLine("--------------");
+            Console.WriteLine(numbers.Average());
+            Console.WriteLine();
 
             //TODO: Order numbers in ascending order and print to the console
 
@@ -46,8 +54,7 @@ namespace LinqExercise
             //TODO: Now print the Average of the employees' YearsOfExperience if their YOE is less than or equal to 10 AND Age is greater than 35.
 
             //TODO: Add an employee to the end of the list without using employees.Add()
-
-
+            
             Console.WriteLine();
 
             Console.ReadLine();
