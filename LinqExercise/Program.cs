@@ -54,7 +54,7 @@ namespace LinqExercise
             Console.WriteLine();
 
             //TODO: Order numbers in any order (ascending or desc) but only print 4 of them **foreach loop only!**
-            var fourNumbers = numbers.OrderBy(x => x).Where(x => x < 4).ToList();
+            var fourNumbers = numbers.OrderBy(x => x).Take(4);
             Console.WriteLine("Only print four numbers:");
             Console.WriteLine("--------------");
             foreach (var number in fourNumbers)
@@ -74,6 +74,14 @@ namespace LinqExercise
             var employees = CreateEmployees();
 
             //TODO: Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S and order this in ascending order by FirstName.
+            var namedEmployees = employees.Where(x => x.FirstName.StartsWith('C') || x.FirstName.StartsWith('S')).OrderBy(x => x.FirstName).ToList();
+            Console.WriteLine("Numbers ordered by ascending:");
+            Console.WriteLine("--------------");
+            foreach (var employee in namedEmployees)
+            {
+                Console.WriteLine(employee.FullName);
+            }
+            Console.WriteLine();
 
             //TODO: Print all the employees' FullName and Age who are over the age 26 to the console and order this by Age first and then by FirstName in the same result.
 
