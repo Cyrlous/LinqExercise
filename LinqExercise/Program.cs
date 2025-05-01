@@ -64,6 +64,11 @@ namespace LinqExercise
             Console.WriteLine();
 
             //TODO: Change the value at index 4 to your age, then print the numbers in descending order
+            var ageNumbers = numbers.Select((x, index) => index == 4 ? 44 : x).OrderByDescending(x => x).ToList();
+            Console.WriteLine("Numbers with index 4 replaced by age:");
+            Console.WriteLine("--------------");
+            ageNumbers.ForEach(Console.WriteLine);
+            Console.WriteLine();
 
             // List of employees ****Do not remove this****
             var employees = CreateEmployees();
